@@ -4,15 +4,16 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class AdminController {
+@RequestMapping("admin")
+public class AdminAuthenticationController {
 	
-	@GetMapping("/")
-	public String showPage(HttpServletRequest req) {
-		req.setAttribute("dashLink", "../vendor/dashboard/dashboard.jsp");
-		return "backend/index/index";
+	@GetMapping("/login")
+	public String showAdminLoginPage(HttpServletRequest req) {
+		return "backend/admin/login/login";
 	}
 	
 	@GetMapping("/getHello")

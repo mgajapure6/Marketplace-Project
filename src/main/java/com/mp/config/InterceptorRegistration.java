@@ -8,12 +8,16 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @Component
 public class InterceptorRegistration extends WebMvcConfigurerAdapter {
 
+	/*@Autowired
+	UrlInterceptor urlInterceptor;*/
+	
 	@Autowired
-	UrlInterceptor urlInterceptor;
+	SubdomainInterceptor subdomainInterceptor;
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(urlInterceptor);
+		registry.addInterceptor(subdomainInterceptor);
+		//registry.addInterceptor(urlInterceptor);
 	}
 
 }

@@ -10,6 +10,7 @@
 <meta name="author" content="" />
 <meta name="_csrf" content="${_csrf.token}" />
 <meta name="_csrf_header" content="${_csrf.headerName}" />
+<meta name="subdomain" content="${subdomain}" />
 <!-- Page Title -->
 <title>Sales Monitoring</title>
 <!-- Main CSS -->
@@ -58,7 +59,7 @@
 			<div class="page-inner">
 				<!-- Main Wrapper -->
 				<div id="main-wrapper">
-					<jsp:include page="../dashboard/dashboard.jsp"></jsp:include>
+					<jsp:include page="${dashLink}"></jsp:include>
 				</div>
 				<!--/ Main Wrapper End -->
 			</div>
@@ -95,8 +96,8 @@
 	<script>
 		window.alert = function(title,msg){
 			var dialog = bootbox.dialog({
-			    title: title,
-			    message: "<p>"+msg+"</p>",
+			    title: !msg ? 'Alert' : title ,
+			    message: "<p>"+(msg ? msg : title)+"</p>",
 			    size: 'large',
 			    //className: 'rubberBand animated',
 			    animate:false,
@@ -111,17 +112,19 @@
 			    }
 			});
 		};
-		window.confirm = function (title,message, callback) {
+		window.confirm = function (title, msg, callback) {
 			var dialog = bootbox.dialog({
-			    title: title,
-			    message: "<p>"+message+"</p>",
+			    title: !msg ? 'Please confirm : Are you sure ?' : title ,
+			    message: "<p>"+(msg ? msg : title)+"</p>",
 			    size: 'large',
 			    className: 'rubberBand animated',
 			    buttons: {
 			        ok: {
 			            label: '<i class="fa fa-check"></i> OK..!',
 			            className: 'btn btn-oblong btn-outline-blue',
-			            callback: callback
+			            callback: function(){
+			            	callback
+			            }
 			        },
 			        cancel: {
 			            label: '<i class="fa fa-times"></i> CANCEL..!',
@@ -133,15 +136,21 @@
 			    }
 			});
         };
+        function callMe(){
+        	alert('test');	
+        }
+        
 		$(document).ajaxSend(function(event, jqxhr, settings) {
 			jqxhr.setRequestHeader("subdomain", "backend");
 			var context = '${pageContext.request.contextPath}';
-			var url = settings.url
+			var url = settings.url;
+			//url = url.replace(context, context + $("meta[name='subdomain']").attr("content"));
 			url = url.replace(context, context + '/backend');
 			settings.url = url;
 			var token = $("meta[name='_csrf']").attr("content");
 			var header = $("meta[name='_csrf_header']").attr("content");
 			jqxhr.setRequestHeader(header, token);
+			jqxhr.setRequestHeader('subdomain', $("meta[name='subdomain']").attr("content");
 		}).ajaxComplete(function(event, jqxhr, settings) {
 			if (jqxhr.status === 401) {
 				alert('Session has expired. Redirecting to login.');
