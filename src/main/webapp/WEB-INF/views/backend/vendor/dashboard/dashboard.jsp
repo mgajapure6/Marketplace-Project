@@ -1188,7 +1188,7 @@
 							<tr>
 								<td class="d-flex align-items-center">
 									<div class="avatar mr-2">
-										<img src="assets/images/user/user1.png" class="img-fluid wd-40 ht-40 rounded-circle" alt="">
+										<img src="backend/assets/images/user/user1.png" class="img-fluid wd-40 ht-40 rounded-circle" alt="">
 									</div>
 									<div class="d-block">
 										<a href="#" class="my-0 mt-1 tx-13">Stanley C. Owens</a>
@@ -1210,7 +1210,7 @@
 							<tr>
 								<td class="d-flex align-items-center">
 									<div class="avatar mr-2">
-										<img src="assets/images/user/user2.png" class="img-fluid wd-40 ht-40 rounded-circle" alt="">
+										<img src="backend/assets/images/user/user2.png" class="img-fluid wd-40 ht-40 rounded-circle" alt="">
 									</div>
 									<div class="d-block">
 										<a href="#" class="my-0 mt-1 tx-13">John Doe</a>
@@ -1232,7 +1232,7 @@
 							<tr>
 								<td class="d-flex align-items-center">
 									<div class="avatar mr-2">
-										<img src="assets/images/user/user3.png" class="img-fluid wd-40 ht-40 rounded-circle" alt="">
+										<img src="backend/assets/images/user/user3.png" class="img-fluid wd-40 ht-40 rounded-circle" alt="">
 									</div>
 									<div class="d-block">
 										<a href="#" class="my-0 mt-1 tx-13">Stanley Owens</a>
@@ -1254,7 +1254,7 @@
 							<tr>
 								<td class="d-flex align-items-center">
 									<div class="avatar mr-2">
-										<img src="assets/images/user/user4.png" class="img-fluid wd-40 ht-40 rounded-circle" alt="">
+										<img src="backend/assets/images/user/user4.png" class="img-fluid wd-40 ht-40 rounded-circle" alt="">
 									</div>
 									<div class="d-block">
 										<a href="#" class="my-0 mt-1 tx-13">Adam L. Easter</a>
@@ -1276,7 +1276,7 @@
 							<tr>
 								<td class="d-flex align-items-center">
 									<div class="avatar mr-2">
-										<img src="assets/images/user/user5.png" class="img-fluid wd-40 ht-40 rounded-circle" alt="">
+										<img src="backend/assets/images/user/user5.png" class="img-fluid wd-40 ht-40 rounded-circle" alt="">
 									</div>
 									<div class="d-block">
 										<a href="#" class="my-0 mt-1 tx-13">Jeffery M. Jensen</a>
