@@ -1,0 +1,24 @@
+.hide {
+	display: none !important;
+}
+
+.page-sidebar{
+	z-index: 1500;
+}
+
+.card.card-expand {
+    z-index: 1560;
+}
+
+.bootbox .modal-header {
+    padding: 14px !important;
+}
+
+.bootbox .modal-header .modal-title {
+    font-weight: 500 !important;
+    color: #000 !important;
+}
+
+.bootbox .modal-body {
+    padding: 0.9rem !important;
+}

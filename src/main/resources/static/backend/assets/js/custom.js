@@ -85,7 +85,7 @@ $( "document" ).ready( function() {
 $( "document" ).ready( function() {
 	var $mainSidebar = $( "#demoSettingSidebar" );
 
-	$mainSidebar.simplerSidebar( {
+	/*$mainSidebar.simplerSidebar( {
 		attr: "sidebar-main",
 		init: "closed",
 		selectors: {
@@ -95,7 +95,7 @@ $( "document" ).ready( function() {
 		animation: {
 			easing: "easeOutQuint"
 		}
-	} );
+	} );*/
 } );
 
 
